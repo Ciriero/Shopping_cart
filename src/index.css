@@ -12,7 +12,6 @@ html {
   height: 100%;
 }
 
-
 :root {
   --var-bg: #efca08;
   --bg-color: #f2f7f5;
@@ -22,8 +21,6 @@ html {
   --transition: 0.3s ease-in-out all;
   --max-width: 1120px;
 }
-
-
 
 body {
   background-color: var(--bg-color);
