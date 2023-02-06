@@ -15,7 +15,7 @@ const Navbar = () => {
       <NavContainer>
         <NavCenter>
           <div className="nav-header">
-            <img src="https://labibliotecadecarfax.com/wp-content/uploads/2021/09/logo-horizontal.png" alt="Carfax" className="logo" />
+            <img src={logo}alt="Carfax" className="logo" />
             <button className="nav-btn" onClick={() => setIsOpen(!isOpen)}>
               <FaBars />
             </button>
