@@ -4,6 +4,8 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  list-style: none;
+  text-decoration: none;
 }
 
 @import url("https://fonts.googleapis.com/css?family=Karla:400|Spectral:400");
@@ -26,3 +28,5 @@ body {
   background-color: var(--bg-color);
   min-height: 100vh;
 }
+
+
