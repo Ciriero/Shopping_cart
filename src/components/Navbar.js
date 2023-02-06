@@ -5,6 +5,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import { menu } from "../data/menu";
 import logo from "../images/logo.jpg";
 import { NavCenter, NavContainer } from "../styles/Navbar.styles";
+import Sidebar from "./Sidebar";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,8 +15,8 @@ const Navbar = () => {
       <NavContainer>
         <NavCenter>
           <div className="nav-header">
-            <img src={logo} alt="Carfax" className="logo"/>
-            <button className="nav-btn">
+            <img src="https://labibliotecadecarfax.com/wp-content/uploads/2021/09/logo-horizontal.png" alt="Carfax" className="logo" />
+            <button className="nav-btn" onClick={() => setIsOpen(!isOpen)}>
               <FaBars />
             </button>
           </div>
@@ -26,8 +27,14 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
+          <div className="shop">
+            <FaShoppingCart />
+            <p className="numero">3</p>
+          </div>
         </NavCenter>
       </NavContainer>
+
+      <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
     </>
   );
 };
