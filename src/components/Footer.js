@@ -6,17 +6,17 @@ const Footer = () => {
   return (
     <FooterContainer>
       <div>
-        <FaBook />
+        <FaBook/>
       </div>
       <div>
-        <FaGift />
+        <FaGift/>
       </div>
       <div>
-        <FaUserAlt />
+        <FaUserAlt/>
       </div>
       <div className="number-container">
         <span className="number">3</span>
-        <FaShoppingCart />
+        <FaShoppingCart/>
       </div>
     </FooterContainer>
   );
