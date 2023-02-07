@@ -28,7 +28,7 @@ export const ButtonRmv = styled.button`
   padding: 0.8rem;
   border-radius: 0.25rem;
   background-color: var(--clr-red2);
-  color: black;
+  color: var(--bg-color);
   transition: 0.3s all ease-in-out;
   cursor: pointer;
   :hover {
@@ -43,14 +43,47 @@ export const CartItems = styled.article`
   margin-top: 3rem;
   display: flex;
   justify-content: space-between;
-
   .image {
     display: flex;
     align-items: center;
+    img {
+      height: 100px;
+      object-fit: cover;
+    }
+    .title,
+    .price,
+    .author,
+    .delete {
+      margin-left: 2rem;
+    }
+    .price,
+    .author,
+    .delete {
+      margin-bottom: 0.7rem;
+    }
+    .title {
+      font-style: italic;
+      font-weight: 700;
+    }
+    .price {
+      margin-top: 0.5rem;
+      color: grey;
+      font-style: italic;
+    }
+    .delete {
+      padding: 0 0.3rem;
+      background: transparent;
+      cursor: pointer;
+      letter-spacing: 0.1rem;
+      border: none;
+      font-size: 1rem;
+    }
   }
+`;
 
-  .image img {
-    height: 100px;
-    object-fit: cover;
-  }
+export const BtnAmount = styled.button`
+  width: 1rem;
+  border: none;
+  background: transparent;
+  cursor: pointer;
 `;

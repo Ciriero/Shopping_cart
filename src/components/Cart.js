@@ -6,21 +6,17 @@ import { CartContainer, ButtonRmv } from "../styles/Cart.styles";
 const Cart = () => {
   return (
     <CartContainer>
-      <h2>YOUR BOOKS</h2>
-      <div>
+      <h2>TUS LIBROS</h2>
         {books.map((item) => (
           <CartItem key={item} {...item} />
         ))}
-      </div>
-      <div>
         <hr />
         <div className="total">
           <h3>
             Total
             <span>$2</span>
           </h3>
-        </div>
-        <ButtonRmv>remove</ButtonRmv>
+        <ButtonRmv>eliminar</ButtonRmv>
       </div>
     </CartContainer>
   );
