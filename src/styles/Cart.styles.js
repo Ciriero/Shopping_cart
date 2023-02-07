@@ -2,9 +2,11 @@ import styled from "styled-components";
 
 export const CartContainer = styled.section`
   width: 400px;
-  height: 70vh;
+  height: 100vh;
   margin: 3rem auto;
-  border: 1px solid black;
+  hr {
+    margin-top: 3rem;
+  }
   .total {
     margin: 1rem;
     h3 {
@@ -17,7 +19,6 @@ export const CartContainer = styled.section`
     max-height: 70vh;
     max-width: 80vw;
     margin: 3rem auto;
-    border: 1px solid black;
   }
 `;
 
@@ -35,5 +36,21 @@ export const ButtonRmv = styled.button`
   }
   @media screen and (min-width: 800px) {
     margin-bottom: 10rem;
+  }
+`;
+
+export const CartItems = styled.article`
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+
+  .image {
+    display: flex;
+    align-items: center;
+  }
+
+  .image img {
+    height: 100px;
+    object-fit: cover;
   }
 `;
