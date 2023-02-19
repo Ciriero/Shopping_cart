@@ -1,8 +1,10 @@
 import React from "react";
 import { CartItems, BtnAmount } from "../styles/Cart.styles";
-import {AiOutlineCloseCircle} from "react-icons/ai"
+import {AiOutlineCloseCircle} from "react-icons/ai";
+import { useGlobalContext } from "../context/context";
 
-const CartItem = ({title, author, price, img, amount}) => {
+const CartItem = ({id, title, author, price, img, amount}) => {
+    const {deleteOne} = useGlobalContext()
   return (
     <CartItems>
       <div className="image">
@@ -11,7 +13,7 @@ const CartItem = ({title, author, price, img, amount}) => {
           <p className="title">{title}</p>
           <p className="author">{author}</p>
           <p className="price">{price}</p>
-          <button className="delete"> 
+          <button className="delete" onClick={() => deleteOne(id)}> 
           <AiOutlineCloseCircle />
           </button>
         </div>

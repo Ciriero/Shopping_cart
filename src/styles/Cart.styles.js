@@ -4,7 +4,7 @@ export const CartContainer = styled.section`
   width: 400px;
   height: 95vh;
   margin: 3rem auto;
-  .empty{
+  .empty {
     font-size: 1rem;
     margin-top: 4rem;
     color: var(--clr-red);
@@ -19,14 +19,13 @@ export const CartContainer = styled.section`
       display: flex;
       justify-content: space-between;
     }
-
   }
   @media screen and (min-width: 800px) {
     width: 80vh;
     max-width: 80vw;
     margin: 3rem auto;
     .empty {
-        font-size: 2rem;
+      font-size: 2rem;
     }
   }
 `;
