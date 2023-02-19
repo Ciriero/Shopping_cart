@@ -2,8 +2,14 @@ import styled from "styled-components";
 
 export const CartContainer = styled.section`
   width: 400px;
-  height: 100vh;
+  height: 95vh;
   margin: 3rem auto;
+  .empty{
+    font-size: 1rem;
+    margin-top: 4rem;
+    color: var(--clr-red);
+    letter-spacing: 0.2rem;
+  }
   hr {
     margin-top: 3rem;
   }
@@ -13,17 +19,20 @@ export const CartContainer = styled.section`
       display: flex;
       justify-content: space-between;
     }
+
   }
   @media screen and (min-width: 800px) {
     width: 80vh;
-    max-height: 70vh;
     max-width: 80vw;
     margin: 3rem auto;
+    .empty {
+        font-size: 2rem;
+    }
   }
 `;
 
 export const ButtonRmv = styled.button`
-  margin-bottom: 3rem;
+  margin-top: 1.5rem;
   border: none;
   padding: 0.8rem;
   border-radius: 0.25rem;
@@ -40,7 +49,7 @@ export const ButtonRmv = styled.button`
 `;
 
 export const CartItems = styled.article`
-  margin-top: 3rem;
+  margin-top: 1.5rem;
   display: flex;
   justify-content: space-between;
   .image {
