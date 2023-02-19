@@ -1,8 +1,10 @@
 import React from "react";
 import { FooterContainer } from "../styles/Footer.styles";
 import { FaShoppingCart, FaUserAlt, FaGift, FaBook } from "react-icons/fa";
+import { useGlobalContext } from "../context/context";
 
 const Footer = () => {
+  const {amount} = useGlobalContext()
   return (
     <FooterContainer>
       <div>
@@ -15,7 +17,7 @@ const Footer = () => {
         <FaUserAlt/>
       </div>
       <div className="number-container">
-        <span className="number">3</span>
+        <span className="number">{amount}</span>
         <FaShoppingCart/>
       </div>
     </FooterContainer>

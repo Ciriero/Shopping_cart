@@ -7,8 +7,10 @@ import logo from "../images/logo.png";
 import { NavCenter, NavContainer } from "../styles/Navbar.styles";
 import Footer from "./Footer";
 import Sidebar from "./Sidebar";
+import { useGlobalContext } from "../context/context";
 
 const Navbar = () => {
+  const {amount} = useGlobalContext()
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -30,7 +32,7 @@ const Navbar = () => {
           </ul>
           <div className="shop">
             <FaShoppingCart />
-            <p className="numero">3</p>
+            <p className="numero">{amount}</p>
           </div>
         </NavCenter>
       </NavContainer>
