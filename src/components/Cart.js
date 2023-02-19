@@ -1,5 +1,4 @@
 import React from "react";
-import books from "../data/books";
 import CartItem from "./CartItem";
 import { CartContainer, ButtonRmv } from "../styles/Cart.styles";
 import { useGlobalContext } from "../context/context";
@@ -17,8 +16,8 @@ const Cart = () => {
   return (
     <CartContainer>
       <h2>TUS LIBROS</h2>
-      {books.map((item) => (
-        <CartItem key={item} {...item} />
+      {cart.map((item) => (
+        <CartItem key={item.id} {...item} />
       ))}
       <hr />
       <div className="total">

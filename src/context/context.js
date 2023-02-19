@@ -1,7 +1,7 @@
 import { createContext, useContext, useReducer } from "react";
 import reducer from "./reducers";
 import books from "../data";
-import { DELETE_ALL } from "./actions";
+import { DELETE_ALL, DELETE_ONE } from "./actions";
 
 const AppContext = createContext();
 const initialState = {
@@ -19,8 +19,15 @@ const AppProvider = ({ children }) => {
     });
   };
 
+  const deleteOne = (id) => {
+    dispatch({
+      type: DELETE_ONE,
+      payload: id,
+    });
+  };
+
   return (
-    <AppContext.Provider value={{ ...state, deleleteAllBooks }}>
+    <AppContext.Provider value={{ ...state, deleleteAllBooks, deleteOne }}>
       {children}
     </AppContext.Provider>
   );

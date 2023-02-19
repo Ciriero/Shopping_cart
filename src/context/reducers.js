@@ -1,4 +1,4 @@
-import { DELETE_ALL } from "./actions";
+import { DELETE_ALL, DELETE_ONE } from "./actions";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -6,6 +6,15 @@ const reducer = (state, action) => {
       return {
         ...state,
         cart: [],
+      };
+    case DELETE_ONE:
+      const deleteBook = state.cart.filter(
+        (item) => item.id !== action.payload
+      );
+      console.log(`borrado id: ${action.payload}`);
+      return {
+        ...state,
+        cart: deleteBook,
       };
 
     default:
