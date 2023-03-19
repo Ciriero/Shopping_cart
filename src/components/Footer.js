@@ -4,21 +4,21 @@ import { FaShoppingCart, FaUserAlt, FaGift, FaBook } from "react-icons/fa";
 import { useGlobalContext } from "../context/context";
 
 const Footer = () => {
-  const {amount} = useGlobalContext()
+  const { amount } = useGlobalContext();
   return (
     <FooterContainer>
       <div>
-        <FaBook/>
+        <FaBook />
       </div>
       <div>
-        <FaGift/>
+        <FaGift />
       </div>
       <div>
-        <FaUserAlt/>
+        <FaUserAlt />
       </div>
       <div className="number-container">
         <span className="number">{amount}</span>
-        <FaShoppingCart/>
+        <FaShoppingCart />
       </div>
     </FooterContainer>
   );

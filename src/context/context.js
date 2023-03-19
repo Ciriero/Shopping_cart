@@ -1,7 +1,7 @@
-import { createContext, useContext, useReducer } from "react";
+import { createContext, useContext, useEffect, useReducer } from "react";
 import reducer from "./reducers";
 import books from "../data";
-import { DELETE_ALL, DELETE_ONE, SELECT_AMOUNT } from "./actions";
+import { DELETE_ALL, DELETE_ONE, SELECT_AMOUNT, GET_TOTAL } from "./actions";
 
 const AppContext = createContext();
 const initialState = {
@@ -32,6 +32,10 @@ const AppProvider = ({ children }) => {
       payload: { id, type },
     });
   };
+
+  useEffect(() => {
+    dispatch({ type: GET_TOTAL });
+  }, [state.cart]);
 
   return (
     <AppContext.Provider

@@ -10,7 +10,7 @@ import Sidebar from "./Sidebar";
 import { useGlobalContext } from "../context/context";
 
 const Navbar = () => {
-  const {amount} = useGlobalContext()
+  const { amount } = useGlobalContext();
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -18,7 +18,7 @@ const Navbar = () => {
       <NavContainer>
         <NavCenter>
           <div className="nav-header">
-            <img src={logo}alt="Carfax" className="logo" />
+            <img src={logo} alt="Carfax" className="logo" />
             <button className="nav-btn" onClick={() => setIsOpen(!isOpen)}>
               <FaBars />
             </button>
