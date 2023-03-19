@@ -1,4 +1,4 @@
-import { DELETE_ALL, DELETE_ONE, SELECT_AMOUNT } from "./actions";
+import { DELETE_ALL, DELETE_ONE, GET_TOTAL, SELECT_AMOUNT } from "./actions";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -27,10 +27,23 @@ const reducer = (state, action) => {
               return { ...item, amount: item.amount - 1 };
             }
           }
-          return item
+          return item;
         })
         .filter((item) => item.amount !== 0);
       return { ...state, cart: tempCart };
+    case GET_TOTAL:
+      let tempTotal = 0;
+      let tempAmount = 0;
+      state.cart.map((item) => {
+        const { price, amount } = item;
+        tempTotal += price * amount;
+        tempAmount += amount;
+      });
+      return {
+        ...state,
+        total: parseFloat(tempTotal.toFixed(2)),
+        amount: tempAmount,
+      };
 
     default:
       return state;

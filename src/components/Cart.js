@@ -23,7 +23,7 @@ const Cart = () => {
       <div className="total">
         <h3>
           Total
-          <span>${total}</span>
+          <span>{total} €</span>
         </h3>
         <ButtonRmv onClick={deleleteAllBooks}>vaciar carrito</ButtonRmv>
       </div>
